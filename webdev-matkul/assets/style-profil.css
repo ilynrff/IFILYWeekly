@@ -1,0 +1,113 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Judul */
+h1 {
+    color: #0d47a1;
+    margin-bottom: 25px;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+/* Navigasi */
+table {
+    display: table;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table td {
+    padding: 15px 25px;
+    transition: 0.3s;
+}
+
+table td:hover {
+    background: #0d47a1;
+}
+
+table td:hover a {
+    color: white;
+}
+
+/* Link */
+a {
+    text-decoration: none;
+    color: #0d47a1;
+    font-weight: bold;
+}
+
+/* Card Profil */
+.card {
+    width: 850px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Nama */
+.card h2 {
+    color: #1565c0;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+/* Paragraf */
+.card p {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+/* Garis */
+hr {
+    margin: 25px auto;
+    border: none;
+    height: 2px;
+    background: #ddd;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+
+    .card {
+        width: 95%;
+        padding: 25px;
+    }
+
+    hr {
+        width: 100% !important;
+    }
+
+    table td {
+        padding: 10px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .card h2 {
+        font-size: 26px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+}

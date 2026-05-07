@@ -1,0 +1,103 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Judul */
+h2 {
+    color: #0d47a1;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Container form */
+div {
+    margin-top: 40px;
+}
+
+/* Form table */
+form table {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Sel tabel form */
+form td {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Input */
+input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 5px rgba(21,101,192,0.3);
+}
+
+/* Tombol */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #0d47a1;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1565c0;
+    transform: scale(1.03);
+}
+
+/* Link */
+a {
+    text-decoration: none;
+}
+
+/* Button back (biar beda sedikit) */
+a button {
+    margin-top: 15px;
+    background: #555;
+}
+
+a button:hover {
+    background: #333;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+
+    input {
+        width: 100%;
+    }
+
+    form table {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
