@@ -14,7 +14,7 @@
 
         <h2>Tambah Data Mahasiswa</h2>
 
-        <form action="mahasiswa.html" method="post">
+        <form action="mahasiswa.php" method="post">
             <table>
                 <tr>
                     <td>Nama</td>
@@ -46,7 +46,7 @@
 
         <br>
 
-        <a href="mahasiswa.html">
+        <a href="mahasiswa.php">
             <button style="border-radius: 5px;">Back</button>
         </a>
 

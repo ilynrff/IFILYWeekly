@@ -17,10 +17,10 @@
     <!-- Navigasi pakai tabel -->
     <table align="center" border="1" cellpadding="10">
         <tr>
-            <td><a href="index.html">Home</a></td>
-            <td><a href="profil.html">Profile</a></td>
-            <td><a href="contact.html">Kontak</a></td>
-            <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+            <td><a href="index.php">Home</a></td>
+            <td><a href="profil.php">Profile</a></td>
+            <td><a href="contact.php">Kontak</a></td>
+            <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
         </tr>
     </table>
 

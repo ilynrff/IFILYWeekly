@@ -9,15 +9,15 @@
 </head>
 
 <style>
-    table,
-    td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
+table,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 
-    td {
-        padding: 15px;
-    }
+td {
+    padding: 15px;
+}
 </style>
 
 <body>
@@ -25,7 +25,7 @@
     <div style="text-align: center;">
         <h1>DATA MAHASISWA</h1>
 
-        <a href="tambahdata.html">
+        <a href="tambahdata.php">
             <button style="border-radius: 10px;">Tambah Data</button>
         </a>
 
@@ -35,54 +35,77 @@
     <!-- Menu Navigasi -->
     <table align="center" border="1" cellpadding="10">
         <tr>
-            <td><a href="index.html">Home</a></td>
-            <td><a href="profil.html">Profile</a></td>
-            <td><a href="contact.html">Kontak</a></td>
-            <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+            <td><a href="index.php">Home</a></td>
+            <td><a href="profil.php">Profile</a></td>
+            <td><a href="contact.php">Kontak</a></td>
+            <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
         </tr>
     </table>
 
-    <br>
-
     <table border="1" align="center" cellpadding="10">
         <tr>
-            <th>No</th>
-            <th>Foto</th>
+            <th>ID</th>
             <th>Nama</th>
             <th>NIM</th>
             <th>Prodi</th>
+            <th>Email</th>
+            <th>No HP</th>
+            <th>Foto</th>
+            <th>Aksi</th>
         </tr>
 
         <tr>
             <td>1</td>
-            <td><img src="assets/images/wowo.jpg" width="80px"></td>
-            <td>Wowo</td>
-            <td>2026001</td>
+            <td>Maulana Jackson Widodo</td>
+            <td>1312343454308</td>
             <td>Informatika</td>
+            <td>maul@unimus.com</td>
+            <td>081234567890</td>
+            <td><img src="assets/images/fufufafa.jpg" width="80px"></td>
+            <td>
+                <a href="editdata.php">
+                    <button style="border-radius: 5px;">Edit</button>
+                </a>
+                <a href="deletedata.php">
+                    <button style="border-radius: 5px;">Delete</button>
+                </a>
+            </td>
         </tr>
 
         <tr>
             <td>2</td>
-            <td><img src="assets/images/owi.jpg" width="80px"></td>
-            <td>Joykowie</td>
-            <td>2026002</td>
+            <td>Budi Santoso</td>
+            <td>23110001</td>
             <td>Informatika</td>
+            <td>budi@unimus.com</td>
+            <td>081234567891</td>
+            <td><img src="assets/images/luhut.jpg" width="80px"></td>
+            <td>
+                <a href="editdata.php">
+                    <button style="border-radius: 5px;">Edit</button>
+                </a>
+                <a href="deletedata.php">
+                    <button style="border-radius: 5px;">Delete</button>
+                </a>
+            </td>
         </tr>
 
         <tr>
             <td>3</td>
-            <td><img src="assets/images/fufufafa.jpg" width="80px"></td>
-            <td>Samsul</td>
-            <td>2026003</td>
+            <td>Siti Nurhaliza</td>
+            <td>23110002</td>
             <td>Sistem Informasi</td>
-        </tr>
-
-        <tr>
-            <td>4</td>
-            <td><img src="assets/images/luhut.jpg" width="80px"></td>
-            <td>Om Luhut</td>
-            <td>2026004</td>
-            <td>Teknik Komputer</td>
+            <td>siti@unimus.com</td>
+            <td>081234567892</td>
+            <td><img src="assets/images/wowo.jpg" width="80px"></td>
+            <td>
+                <a href="editdata.php">
+                    <button style="border-radius: 5px;">Edit</button>
+                </a>
+                <a href="deletedata.php">
+                    <button style="border-radius: 5px;">Delete</button>
+                </a>
+            </td>
         </tr>
 
     </table>
