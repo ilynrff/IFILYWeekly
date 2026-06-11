@@ -1,24 +1,17 @@
+<?php
+require 'fungsi.php';
+
+$mahasiswas = tampilData("SELECT * FROM mahasiswa");
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Mahasiswa | INFORMATIKA 2026</title>
-    <link rel="stylesheet" href="assets/style-mahasiswa.css">
+    <title>Data Mahasiswa</title>
 </head>
-
-<style>
-table,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-td {
-    padding: 15px;
-}
-</style>
 
 <body>
 
@@ -28,10 +21,10 @@ td {
         <a href="tambahdata.php">
             <button style="border-radius: 10px;">Tambah Data</button>
         </a>
-
     </div>
 
     <br>
+
     <!-- Menu Navigasi -->
     <table align="center" border="1" cellpadding="10">
         <tr>
@@ -41,6 +34,8 @@ td {
             <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
         </tr>
     </table>
+
+    <br>
 
     <table border="1" align="center" cellpadding="10">
         <tr>
@@ -54,59 +49,31 @@ td {
             <th>Aksi</th>
         </tr>
 
+        <?php foreach ($mahasiswas as $mhs) : ?>
         <tr>
-            <td>1</td>
-            <td>Maulana Jackson Widodo</td>
-            <td>1312343454308</td>
-            <td>Informatika</td>
-            <td>maul@unimus.com</td>
-            <td>081234567890</td>
-            <td><img src="assets/images/fufufafa.jpg" width="80px"></td>
-            <td>
-                <a href="editdata.php">
-                    <button style="border-radius: 5px;">Edit</button>
-                </a>
-                <a href="deletedata.php">
-                    <button style="border-radius: 5px;">Delete</button>
-                </a>
-            </td>
-        </tr>
+            <td><?= $mhs['id']; ?></td>
+            <td><?= $mhs['nama']; ?></td>
+            <td><?= $mhs['nim']; ?></td>
+            <td><?= $mhs['prodi']; ?></td>
+            <td><?= $mhs['email']; ?></td>
+            <td><?= $mhs['no_hp']; ?></td>
 
-        <tr>
-            <td>2</td>
-            <td>Budi Santoso</td>
-            <td>23110001</td>
-            <td>Informatika</td>
-            <td>budi@unimus.com</td>
-            <td>081234567891</td>
-            <td><img src="assets/images/luhut.jpg" width="80px"></td>
             <td>
-                <a href="editdata.php">
-                    <button style="border-radius: 5px;">Edit</button>
-                </a>
-                <a href="deletedata.php">
-                    <button style="border-radius: 5px;">Delete</button>
-                </a>
+                <img src="assets/images/<?= $mhs['foto']; ?>" width="80">
             </td>
-        </tr>
 
-        <tr>
-            <td>3</td>
-            <td>Siti Nurhaliza</td>
-            <td>23110002</td>
-            <td>Sistem Informasi</td>
-            <td>siti@unimus.com</td>
-            <td>081234567892</td>
-            <td><img src="assets/images/wowo.jpg" width="80px"></td>
             <td>
-                <a href="editdata.php">
+                <a href="editdata.php?id=<?= $mhs['id']; ?>">
                     <button style="border-radius: 5px;">Edit</button>
                 </a>
-                <a href="deletedata.php">
+
+                <a href="deletedata.php?id=<?= $mhs['id']; ?>"
+                    onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
                     <button style="border-radius: 5px;">Delete</button>
                 </a>
             </td>
         </tr>
+        <?php endforeach; ?>
 
     </table>
 
@@ -123,7 +90,7 @@ td {
         </tr>
         <tr>
             <td>2,1</td>
-            <td colspan="2" rowspan="2" style="font-size: 40px;" align="center" padding="20px">?</td>
+            <td colspan="2" rowspan="2" style="font-size: 40px;" align="center">?</td>
             <td>2,4</td>
         </tr>
         <tr>
