@@ -10,23 +10,26 @@ $mahasiswas = tampilData("SELECT * FROM mahasiswa");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Mahasiswa</title>
+    <link rel="stylesheet" href="assets/style-mahasiswa.css">
 </head>
 
 <body>
 
-    <div style="text-align: center;">
-        <h1>DATA MAHASISWA</h1>
+    <div align="center">
+
+        <h2>Data Mahasiswa</h2>
 
         <a href="tambahdata.php">
-            <button style="border-radius: 10px;">Tambah Data</button>
+            <button style="border-radius:5px;">
+                Tambah Data
+            </button>
         </a>
+
     </div>
 
     <br>
 
-    <!-- Menu Navigasi -->
-    <table align="center" border="1" cellpadding="10">
+    <table border="1" cellspacing="0" cellpadding="10" align="center">
         <tr>
             <td><a href="index.php">Home</a></td>
             <td><a href="profil.php">Profile</a></td>
@@ -37,8 +40,9 @@ $mahasiswas = tampilData("SELECT * FROM mahasiswa");
 
     <br>
 
-    <table border="1" align="center" cellpadding="10">
-        <tr>
+    <table border="1" align="center" cellpadding="10" cellspacing="0">
+
+        <tr align="center">
             <th>ID</th>
             <th>Nama</th>
             <th>NIM</th>
@@ -50,7 +54,9 @@ $mahasiswas = tampilData("SELECT * FROM mahasiswa");
         </tr>
 
         <?php foreach ($mahasiswas as $mhs) : ?>
-        <tr>
+
+        <tr align="center">
+
             <td><?= $mhs['id']; ?></td>
             <td><?= $mhs['nama']; ?></td>
             <td><?= $mhs['nim']; ?></td>
@@ -59,20 +65,28 @@ $mahasiswas = tampilData("SELECT * FROM mahasiswa");
             <td><?= $mhs['no_hp']; ?></td>
 
             <td>
-                <img src="assets/images/<?= $mhs['foto']; ?>" width="80">
+                <img src="assets/images/<?= $mhs['foto']; ?>" width="80" style="border-radius:5px;">
             </td>
 
             <td>
+
                 <a href="editdata.php?id=<?= $mhs['id']; ?>">
-                    <button style="border-radius: 5px;">Edit</button>
+                    <button style="border-radius:5px;">
+                        Edit
+                    </button>
                 </a>
 
-                <a href="deletedata.php?id=<?= $mhs['id']; ?>"
+                <a href="hapusdata.php?id=<?= $mhs['id']; ?>"
                     onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
-                    <button style="border-radius: 5px;">Delete</button>
+                    <button style="border-radius:5px;">
+                        Delete
+                    </button>
                 </a>
+
             </td>
+
         </tr>
+
         <?php endforeach; ?>
 
     </table>
