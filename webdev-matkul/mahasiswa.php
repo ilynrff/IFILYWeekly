@@ -1,4 +1,5 @@
 <?php
+
 require 'fungsi.php';
 
 $mahasiswas = tampilData("SELECT * FROM mahasiswa");
@@ -54,6 +55,7 @@ $mahasiswas = tampilData("SELECT * FROM mahasiswa");
         </tr>
 
         <?php foreach ($mahasiswas as $mhs) : ?>
+
 
         <tr align="center">
 

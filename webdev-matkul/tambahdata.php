@@ -2,6 +2,7 @@
 
 require 'fungsi.php';
 
+
 if (isset($_POST['submit'])) {
 
     $result = tambahData($_POST);
