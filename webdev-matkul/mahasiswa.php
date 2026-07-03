@@ -54,7 +54,7 @@ $mahasiswas = tampilData("SELECT * FROM mahasiswa");
             <th>Aksi</th>
         </tr>
 
-        <?php foreach ($mahasiswas as $mhs) : ?>
+        <?php foreach ($mahasiswas as $mhs): ?>
 
 
         <tr align="center">
@@ -67,7 +67,17 @@ $mahasiswas = tampilData("SELECT * FROM mahasiswa");
             <td><?= $mhs['no_hp']; ?></td>
 
             <td>
+
+                <?php if (!empty($mhs['foto'])): ?>
+
                 <img src="assets/images/<?= $mhs['foto']; ?>" width="80" style="border-radius:5px;">
+
+                <?php else: ?>
+
+                Tidak ada foto
+
+                <?php endif; ?>
+
             </td>
 
             <td>

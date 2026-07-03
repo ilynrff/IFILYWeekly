@@ -2,25 +2,22 @@
 
 require 'fungsi.php';
 
-// ambil id dari URL
 $id = $_GET['id'];
 
-// query hapus
-$query = "DELETE FROM mahasiswa WHERE id = $id";
+if (hapusData($id) > 0) {
 
-mysqli_query($conn, $query);
-
-// cek hasil
-if (mysqli_affected_rows($conn) > 0) {
     echo "<script>
-        alert('Data berhasil dihapus!');
-        window.location='mahasiswa.php';
-    </script>";
+            alert('Data berhasil dihapus!');
+            document.location.href='mahasiswa.php';
+            </script>";
+
 } else {
+
     echo "<script>
-        alert('Data gagal dihapus!');
-        window.location='mahasiswa.php';
-    </script>";
+            alert('Data gagal dihapus!');
+            document.location.href='mahasiswa.php';
+            </script>";
+
 }
 
 ?>
