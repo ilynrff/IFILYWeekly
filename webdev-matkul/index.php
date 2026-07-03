@@ -19,12 +19,14 @@
     <br>
 
     <table border="1" cellspacing="0" cellpadding="10" align="center">
-        <tr>
+        <>
             <td><a href="index.php">Home</a></td>
             <td><a href="profil.php">Profile</a></td>
             <td><a href="contact.php">Kontak</a></td>
             <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
-        </tr>
+            <td>
+                <a href="login.php">Login</a>
+            </td>
     </table>
 
     <div align="center">

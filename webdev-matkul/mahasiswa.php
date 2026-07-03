@@ -36,7 +36,6 @@ $mahasiswas = tampilData("SELECT * FROM mahasiswa");
             <td><a href="profil.php">Profile</a></td>
             <td><a href="contact.php">Kontak</a></td>
             <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
-        </tr>
     </table>
 
     <br>
